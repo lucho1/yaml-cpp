@@ -9,7 +9,6 @@ project "yaml-cpp"
 	{
 		"src/**.h",
 		"src/**.cpp",
-		
 		"include/**.h"
 	}
 
@@ -31,8 +30,10 @@ project "yaml-cpp"
 
 	filter "configurations:Debug"
 		runtime "Debug"
-		symbols "on"
-
+		symbols "On"
 	filter "configurations:Release"
 		runtime "Release"
-		optimize "on"
+		optimize "On"
+	filter "configurations:Dist"
+        runtime "Release"
+        optimize "On"
